@@ -1,0 +1,25 @@
+{
+  "name": "moisesrodriguesdev/tcc",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "moises",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "facebook/webdriver": "^1.7",
+    "spatie/laravel-collection-macros": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "TccUnifametro\\": "src/"
+    }
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^5.4"
+  }
+}
