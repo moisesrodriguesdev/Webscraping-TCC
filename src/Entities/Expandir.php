@@ -31,6 +31,7 @@ class Expandir extends DriverConnection
             }
 
             $this->clickNextMonth();
+            $this->waitHideLoad();
         }
 
         return $courses->toArray();
@@ -43,10 +44,12 @@ class Expandir extends DriverConnection
             $heads = $this->getTableHeaders();
 
             foreach ($el->findElements(WebDriverBy::tagName('span')) as $spanKey => $span) {
+                $key = strtolower(str_replace(' ','_', strtr($heads->get($spanKey), $this->caracteres())));
+
                 if ($spanKey === 6) {
-                    $courseLine[$heads->get($spanKey)] = $span->findElement(WebDriverBy::cssSelector('span a'))->getAttribute('href');
+                    $courseLine[$key] = $span->findElement(WebDriverBy::cssSelector('span a'))->getAttribute('href');
                 } else {
-                    $courseLine[$heads->get($spanKey)] = $span->getAttribute('innerHTML');
+                    $courseLine[$key] = $span->getAttribute('innerHTML');
                 }
             }
 

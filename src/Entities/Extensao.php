@@ -45,10 +45,12 @@ class Extensao extends DriverConnection
                 $row = [];
 
                 foreach ($rowEl->findElements(WebDriverBy::tagName('span')) as $spanKey => $span) {
+                    $key = strtolower(str_replace(' ','_', strtr($heads->get($spanKey), $this->caracteres())));
+
                     if ($spanKey === 6) {
-                        $row[$heads->get($spanKey)] = $span->findElement(WebDriverBy::cssSelector('span a'))->getAttribute('href');
+                        $row[$key] = $span->findElement(WebDriverBy::cssSelector('span a'))->getAttribute('href');
                     } else {
-                        $row[$heads->get($spanKey)] = $span->getAttribute('innerHTML');
+                        $row[$key] = $span->getAttribute('innerHTML');
                     }
                 }
 
