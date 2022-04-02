@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</head>
+<body class="container mx-auto mt-4" id="app">
+    <div class="flex justify-center mt-6">
+        <div class="flex flex-col gap-5">
+            <div class="relative flex items-start">
+                <div class="flex items-center h-5">
+                    <input id="extensao" type="radio" name="cursos-type" value="extensao" v-model="type" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                </div>
+
+                <div class="ml-3 text-sm">
+                    <label for="extensao" class="font-medium text-gray-700">Extensão</label>
+                    <p id="extensao-description" class="text-gray-500">Cursos de curta duração que oferece aperfeiçoamento ou obtenção de novos conhecimentos.</p>
+                </div>
+            </div>
+
+            <div class="relative flex items-start">
+                <div class="flex items-center h-5">
+                    <input id="expandir" type="radio" name="cursos-type" value="expandir" v-model="type" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                </div>
+
+                <div class="ml-3 text-sm">
+                    <label for="expandir" class="font-medium text-gray-700">Expandir</label>
+                    <p id="expandir-description" class="text-gray-500">Cursos gratuitos de curta duração para alunos e comunidade</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-center">
+            <div class="sm:flex-auto">
+                <h1 class="text-xl font-semibold text-gray-900">Cursos</h1>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+				<input id="search" name="search" v-model="procurar" class="block w-full pl-10 pr-3 py-2 border rounded-md leading-5 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm" placeholder="Nome do curso" type="search">
+            </div>
+        </div>
+
+        <div class="mt-8 flex flex-col" >
+            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                        <table class="min-w-full">
+                            <thead class="bg-white">
+                                <tr>
+                                    <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Campus</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Curso</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Periodo</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Carga</th>
+                                    <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Inscrições</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="bg-white" v-for="(cursoMes, cursoMesIndex) in coursesFiltered" :key="cursoMesIndex">
+                                <tr class="border-t border-gray-200">
+                                    <th colspan="5" scope="colgroup" class="bg-gray-50 px-4 py-2 text-left text-md font-semibold text-gray-900 sm:px-6" v-text="cursoMes.month"></th>
+                                </tr>
+
+                                <tr class="border-t border-gray-300" v-for="(curso, cursoIndex) in cursoMes.courses" :key="cursoIndex">
+									<template v-if="this.isExpandir">
+										<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ curso.campus }}</td>
+										<td class="px-3 py-4 text-sm text-gray-500">{{ curso.atividade }}</td>
+										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ curso.periodo }}</td>
+										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ curso.carga_horaria }}</td>
+										<td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+											<a :href="curso.inscricoes" class="text-indigo-600 hover:text-indigo-900" target="_blank">Inscrições</a>
+										</td>
+									</template>
+
+									<template  v-for="(categoriaCurso, categoriaCursoIndex) in curso.coursesBelongsToCategory" :key="categoriaCursoIndex">
+										<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ categoriaCurso.campus }}</td>
+										<td class="px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.atividade }} - <b>{{ curso.category }}</b></td>
+										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.periodo }}</td>
+										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.carga_horaria }}</td>
+										<td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+											<a :href="categoriaCurso.inscricoes" class="text-indigo-600 hover:text-indigo-900" target="_blank">Inscrições</a>
+										</td>
+									</template>
+                                </tr>
+							</tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                message: 'Hello Vue!',
+                courses: [],
+                coursesFiltered: [],
+                type: 'expandir',
+				procurar: null
+            }
+        },
+        mounted() {
+            fetch('http://localhost:8080/data.json')
+                .then((response) => {
+                    response.json().then(res => {
+                        this.courses = res
+
+                        this.coursesFiltered = this.courses.expandir
+                    })
+                })
+                .catch(err => {
+                })
+
+        },
+        computed: {
+			isExpandir() {
+				return this.type === 'expandir'
+           	},
+			isExtensao() {
+				return this.type === 'extensao'
+          	}
+        },
+		watch: {
+			type() {
+				if (this.isExpandir) {
+					this.coursesFiltered = this.courses.expandir
+				}
+
+				if (this.isExtensao) {
+					this.coursesFiltered = this.courses.extensao
+				}
+			},
+			'procurar': _.debounce(function (curso) {
+				console.log('oi')
+			}, 500),
+		}
+    }).mount('#app')
+</script>

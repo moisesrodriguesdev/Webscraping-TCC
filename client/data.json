@@ -1,0 +1,260 @@
+{
+  "extensao": [
+    {
+      "month": "Abril de 2022",
+      "courses": [
+        {
+          "category": "Veterin\u00e1ria",
+          "coursesBelongsToCategory": [
+            {
+              "campus": "Fortaleza",
+              "atividade": "CURSO DE ATUALIZA\u00c7\u00d5ES EM CL\u00cdNICA M\u00c9DICA DE FELINOS",
+              "periodo": "19 a 23\/04\/2022",
+              "facilitador": "Dr. Reginaldo Pereira de Sousa Filho",
+              "carga_horaria": "16h",
+              "vagas": "40",
+              "inscricoes": "http:\/\/portal.fametro.com.br\/corpore.net\/Source\/EduPS-ProcessoSeletivo\/Public\/EduPSPublicMain.aspx"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "expandir": [
+    {
+      "month": "Mar\u00e7o de 2022",
+      "courses": [
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "PRESCRI\u00c7\u00c3O DE EXERC\u00cdCIO PARA ENDURANCE",
+          "periodo": "04 e 08\/03\/2022 \u00e0s 14h\n",
+          "facilitador": "PROF\u00ba JURANDIR FERNANDES CAVALCANTE\n",
+          "carga_horaria": "6h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/prescricao-de-exercicio-para-endurance__1495292"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "PR\u00c1TICA DE ESCRITURA\u00c7\u00c3O CONT\u00c1BIL PARA MPE\u00b4S",
+          "periodo": "05\/03\/2022 \u00e0s 08h",
+          "facilitador": "PROF\u00ba CHARLES WASHINGTON COSTA DE ASSIS\n",
+          "carga_horaria": "4h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/pratica-de-escrituracao-contabil-para-mpes__1495303"
+        },
+        {
+          "campus": "Cascav\u00e9l",
+          "atividade": "IRPF 2022: DA OBRIGA\u00c7\u00c3O PRINCIPAL \u00c0 PR\u00c1TICA",
+          "periodo": "05\/03\/2022 \u00e0s 08h",
+          "facilitador": "PROF\u00ba ANDERSON ALAN COSTA SILVA\n",
+          "carga_horaria": "6h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/irpf-2022-da-obrigacao-principal-a-pratica__1495322"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "INTRODU\u00c7\u00c3O A CONTAGEM DE CARBOIDRATOS NO DIABETES MELLITUS TIPO 1",
+          "periodo": "11\/03\/2022 \u00e0s 14h30 e 12\/03\/2022 \u00e0s 08h30",
+          "facilitador": "PROF\u00aa ALANE NOGUEIRA BEZERRA\n",
+          "carga_horaria": "6h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/introducao-a-contagem-de-carboidratos-no-diabetes-mellitus-tipo-1__1495487"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "EXCEL DASHBOARD",
+          "periodo": "12\/03\/2022 \u00e0s 08h",
+          "facilitador": "PROF\u00ba ANDSON DE FREITAS VIANA\n",
+          "carga_horaria": "4h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/excel-dashboard__1495514"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "AN\u00c1LISE DE ESTRUTURAS ATRAV\u00c9S DO FTOOL",
+          "periodo": "14\/03\/2022 \u00e0s 15h",
+          "facilitador": "PROF\u00ba FELIPE OSCAR PINTO BARROSO \n",
+          "carga_horaria": "3h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/analise-de-estruturas-atraves-do-ftool__1495519"
+        },
+        {
+          "campus": "Curso Remoto",
+          "atividade": "POR QUE AINDA N\u00c3O ESTAMOS AGINDO PARA SALVAR O MUNDO? UMA PERSPECTIVA DA PSICOLOGIA",
+          "periodo": "15\/03\/2022 \u00e0s 18h30",
+          "facilitador": "PROF\u00ba YAN VALDERLON DOS SANTOS LIMA\n",
+          "carga_horaria": "3h",
+          "vagas": "500",
+          "inscricoes": "https:\/\/www.sympla.com.br\/por-que-ainda-nao-estamos-agindo-para-salvar-o-mundo-uma-perspectiva-da-psicologia__1495526"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "COMPORTAMENTO MOTOR, DESENVOLVIMENTO HUMANO E PR\u00c1TICAS ESPORTIVAS",
+          "periodo": "15 e 16\/03\/2022 \u00e0s 15h",
+          "facilitador": "PROF\u00ba RONNISSON LUIS CARVALHO BARBOSA\n",
+          "carga_horaria": "6h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/comportamento-motor-desenvolvimento-humano-e-praticas-esportivas__1495531"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "FACILITA\u00c7\u00c3O NEUROMUSCULAR PROPRIOCEPTIVA NO P\u00d3S OPERAT\u00d3RIO DE R-LCA",
+          "periodo": "15\/03\/2022 \u00e0s 16h",
+          "facilitador": "PROF\u00ba NORRAN FERREIRA BRAGA\n",
+          "carga_horaria": "3h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/facilitacao-neuromuscular-proprioceptiva-no-pos-operatorio-de-r-lca__1495539"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "PREVEN\u00c7\u00c3O CONTRA INC\u00caNDIOS: CERTIFICA\u00c7\u00c3O DE EDIFICA\u00c7\u00d5ES DE ACORDO COM O C\u00d3DIGO DE SEGURAN\u00c7A CONTRA INC\u00caNDIOS DO ESTADO DO CEAR\u00c1",
+          "periodo": "17\/03\/2022 \u00e0s 14h30",
+          "facilitador": "Ten. WAGNER MAIA\n",
+          "carga_horaria": "3h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/prevencao-contra-incendios-certificacao-de-edificacoes__1495549"
+        },
+        {
+          "campus": "Curso Remoto",
+          "atividade": "LEI BRASILEIRA DE INCLUS\u00c3O \u2013 PRIORIDADES EM DISCUSS\u00c3O",
+          "periodo": "18\/03\/2022 \u00e0s 17h",
+          "facilitador": "PROF\u00ba ROG\u00c9RIO DA SILVE E SOUZA\n",
+          "carga_horaria": "2h",
+          "vagas": "500",
+          "inscricoes": "https:\/\/www.sympla.com.br\/lei-brasileira-de-inclusao---prioridades-em-discussao__1495561"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "EXERC\u00cdCIO F\u00cdSICO PARA PESSOAS COM ASMA",
+          "periodo": "21\/03\/2022 \u00e0s 14h",
+          "facilitador": "PROF\u00aa RAISSA FORTE PIRES CUNHA\n",
+          "carga_horaria": "2h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/exercicio-fisico-para-pessoas-com-asma__1495574"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "SIMULA\u00c7\u00c3O DE ATENDIMENTO NUTRICIONAL: USO DE SOFTWARE DE NUTRI\u00c7\u00c3O E BIOIMPED\u00c2NCIA.",
+          "periodo": "22\/03\/2022 \u00e0s 14h",
+          "facilitador": "PROF\u00aa ROBERTA FREITAS CELEDONIO\n",
+          "carga_horaria": "3h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/simulacao-de-atendimento-nutricional-uso-de-software-de-nutricao-e-bioimpedancia__1495637"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "AVALIANDO PARA OTIMIZAR A PRESCRI\u00c7\u00c3O DE EXERC\u00cdCIOS",
+          "periodo": "22 e 25\/03\/2022 \u00e0s 14h30",
+          "facilitador": "PROF\u00ba LINO D\u00c9LCIO GON\u00c7ALVES SCIPI\u00c3O JUNIOR\n",
+          "carga_horaria": "6h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/avaliando-para-otimizar-a-prescricao-de-exercicios__1495648"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "DESCOMPLICANDO O TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO \u2013 TCLE",
+          "periodo": "24\/03\/2022 \u00e0s 11h",
+          "facilitador": "PROF\u00aa DENISE MOREIRA LIMA LOBO\n",
+          "carga_horaria": "2h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/descomplicando-o-termo-de-consentimento-livre-e-esclarecido---tcle__1495666"
+        },
+        {
+          "campus": "Curso Remoto",
+          "atividade": "TCC PASSO A PASSO: Desvendando o processo de elabora\u00e7\u00e3o de trabalhos cient\u00edficos",
+          "periodo": "25\/03\/2022 e 08\/04\/2022 \u00e0s 16h\n",
+          "facilitador": "PROF\u00aa GABRIELLA DE ASSIS WANDERLEY\n",
+          "carga_horaria": "4h",
+          "vagas": "500",
+          "inscricoes": "https:\/\/www.sympla.com.br\/tcc-passo-a-passo-desvendando-o-processo-de-elaboracao-de-trabalhos-cientificos__1495681"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "ELABORA\u00c7\u00c3O DE PROJETO SOCIAL E CAPTA\u00c7\u00c3O DE RECURSO VIA FUNDO MUNICIPAL DA INF\u00c2NCIA E ADOLESC\u00caNCIA",
+          "periodo": "26\/03\/2022  \u00e0s 08h",
+          "facilitador": "PROF\u00aa MARCIA MARIA PINHEIRO MONTE\n",
+          "carga_horaria": "4h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/elaboracao-de-projeto-social-e-captacao-de-recurso-via-fundo-municipal-da-infancia-e-adolescencia__1495695"
+        },
+        {
+          "campus": "Maracana\u00fa",
+          "atividade": "PROCIVIL I \u2013 ENGENHARIA DE PRODU\u00c7\u00c3O APLICADA \u00c0 CONSTRU\u00c7\u00c3O CIVIL I",
+          "periodo": "29 e 30\/03\/2022 \u00e0s 17h30",
+          "facilitador": "PROF\u00ba JOS\u00c9 M\u00c1RCIO FEITOSA MONTEIRO",
+          "carga_horaria": "3h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/procivil-i---engenharia-de-producao-aplicada-a-construcao-civil-i__1495476"
+        }
+      ]
+    },
+    {
+      "month": "Abril de 2022",
+      "courses": [
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "IMPOSTO DE RENDA 2022: DA OBRIGA\u00c7\u00c3O PRINCIPAL \u00c0 PR\u00c1TICA",
+          "periodo": "02\/04\/2022 \u00e0s 08h",
+          "facilitador": "PROF\u00ba ANDERSON ALAN COSTA SILVA\n",
+          "carga_horaria": "4h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/imposto-de-renda-2022-da-obrigacao-principal-a-pratica__1495508"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "PR\u00c1TICAS DE SONDAGENS G\u00c1STRICAS E VESICAIS",
+          "periodo": "AGUARDANDO NOVA DATA",
+          "facilitador": "PROF\u00ba FRANCISCO ARICLENE OLIVEIRA\n",
+          "carga_horaria": "4h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/praticas-de-sondagens-gastricas-e-vesicais__1495345"
+        },
+        {
+          "campus": "Fortaleza Centro",
+          "atividade": "ASSIST\u00caNCIA DE ENFERMAGEM A PESSOAS EM USO DE DISPOSITIVO VENOSO PER\u00cdFERICO E\/OU CENTRAIS",
+          "periodo": "AGUARDANDO NOVA DATA",
+          "facilitador": "PROF\u00ba FRANCISCO ARICLENE OLIVEIRA\n",
+          "carga_horaria": "4h",
+          "vagas": "50",
+          "inscricoes": "https:\/\/www.sympla.com.br\/assistencia-de-enfermagem-a-pessoas-em-uso-de-dispositivo-venoso-periferico-eou-centrais__1495544"
+        }
+      ]
+    },
+    {
+      "month": "Maio de 2022",
+      "courses": []
+    },
+    {
+      "month": "Junho de 2022",
+      "courses": []
+    },
+    {
+      "month": "Julho de 2022",
+      "courses": []
+    },
+    {
+      "month": "Agosto de 2022",
+      "courses": []
+    },
+    {
+      "month": "Setembro de 2022",
+      "courses": []
+    },
+    {
+      "month": "Outubro de 2022",
+      "courses": []
+    },
+    {
+      "month": "Novembro de 2022",
+      "courses": []
+    },
+    {
+      "month": "Dezembro de 2022",
+      "courses": []
+    },
+    {
+      "month": "Janeiro de 2023",
+      "courses": []
+    }
+  ]
+}
