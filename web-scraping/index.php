@@ -10,6 +10,6 @@ $data = collect(['extensao' => $cursosDeExtensao, 'expandir' => $cursosDoExpandi
 
 $arquivo = 'data.json';
 $json    = json_encode($data);
-$file    = fopen(__DIR__ . '/' . $arquivo, 'w');
+$file    = fopen(__DIR__ . 'index.php/' . $arquivo, 'w');
 fwrite($file, $json);
 fclose($file);
