@@ -8,8 +8,6 @@ $cursosDoExpandir = (new Expandir())->run();
 
 $data = collect(['extensao' => $cursosDeExtensao, 'expandir' => $cursosDoExpandir])->toArray();
 
-$arquivo = 'data.json';
-$json    = json_encode($data);
-$file    = fopen(__DIR__ . 'index.php/' . $arquivo, 'w');
-fwrite($file, $json);
-fclose($file);
+$fp = fopen('cursos.json', 'a');//opens file in append mode
+fwrite($fp, json_encode($data));
+fclose($fp);

@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "TccUnifametro\\": "web-scraping/src/"
+      "TccUnifametro\\": "src/"
     }
   },
   "require-dev": {

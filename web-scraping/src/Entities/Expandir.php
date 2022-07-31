@@ -79,7 +79,7 @@ class Expandir extends DriverConnection
 
     private function findCountMonths(): int
     {
-        return count($this->driverExpandir->findElements(WebDriverBy::cssSelector('.fam-calendario-owl .owl-item:not(.cloned) > li'))) - 1;
+        return count($this->driverExpandir->findElements(WebDriverBy::cssSelector('.fam-calendario-owl .owl-item:not(.cloned) > li'))) - 5;
     }
 
     protected function setDriver(): void

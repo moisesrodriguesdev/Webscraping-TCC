@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
 </head>
 <body class="container mx-auto mt-4" id="app">
     <div class="flex justify-center mt-6">
@@ -37,14 +38,15 @@
     <div class="px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center">
             <div class="sm:flex-auto">
-                <h1 class="text-xl font-semibold text-gray-900">Cursos</h1>
+                <h1 class="text-xl font-semibold text-gray-900">Cursos de {{ type }}</h1>
             </div>
+
             <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-				<input id="search" name="search" v-model="procurar" class="block w-full pl-10 pr-3 py-2 border rounded-md leading-5 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm" placeholder="Nome do curso" type="search">
+				<input id="search" name="search" v-model="curso" class="block w-full pl-10 pr-3 py-2 border rounded-md leading-5 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm" placeholder="Nome do curso" type="search">
             </div>
         </div>
 
-        <div class="mt-8 flex flex-col" >
+        <div class="my-10 flex flex-col" >
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -59,31 +61,31 @@
                                 </tr>
                             </thead>
 
-                            <tbody class="bg-white" v-for="(cursoMes, cursoMesIndex) in coursesFiltered" :key="cursoMesIndex">
+                            <tbody class="bg-white" v-for="(curso, index) in courses" :key="curso.index">
                                 <tr class="border-t border-gray-200">
-                                    <th colspan="5" scope="colgroup" class="bg-gray-50 px-4 py-2 text-left text-md font-semibold text-gray-900 sm:px-6" v-text="cursoMes.month"></th>
+                                    <th colspan="5" scope="colgroup" class="bg-gray-50 px-4 py-2 text-left text-md font-semibold text-gray-900 sm:px-6">{{ index }}</th>
                                 </tr>
 
-                                <tr class="border-t border-gray-300" v-for="(curso, cursoIndex) in cursoMes.courses" :key="cursoIndex">
-									<template v-if="this.isExpandir">
-										<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ curso.campus }}</td>
-										<td class="px-3 py-4 text-sm text-gray-500">{{ curso.atividade }}</td>
-										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ curso.periodo }}</td>
-										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ curso.carga_horaria }}</td>
-										<td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-											<a :href="curso.inscricoes" class="text-indigo-600 hover:text-indigo-900" target="_blank">Inscrições</a>
+                                <tr class="border-t border-gray-300" v-for="(capacitacao, cursoIndex) in curso" :key="cursoIndex">
+										<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ capacitacao.campus }}</td>
+										<td class="px-3 py-4 text-sm text-gray-500">
+											{{ capacitacao.atividade }}
+											<b v-if="this.type === 'extensao'"> / {{ capacitacao.categoria }}</b>
 										</td>
-									</template>
-
-									<template  v-for="(categoriaCurso, categoriaCursoIndex) in curso.coursesBelongsToCategory" :key="categoriaCursoIndex">
-										<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ categoriaCurso.campus }}</td>
-										<td class="px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.atividade }} - <b>{{ curso.category }}</b></td>
-										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.periodo }}</td>
-										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.carga_horaria }}</td>
+										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ capacitacao.periodo }}</td>
+										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ capacitacao.carga_horaria }}</td>
 										<td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-											<a :href="categoriaCurso.inscricoes" class="text-indigo-600 hover:text-indigo-900" target="_blank">Inscrições</a>
+											<a :href="capacitacao.inscricoes" class="text-indigo-600 hover:text-indigo-900" target="_blank">Inscrições</a>
 										</td>
-									</template>
+<!--									<template  v-for="(categoriaCurso, categoriaCursoIndex) in curso.coursesBelongsToCategory" :key="categoriaCursoIndex">-->
+<!--										<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ categoriaCurso.campus }}</td>-->
+<!--										<td class="px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.atividade }} - <b>{{ curso.category }}</b></td>-->
+<!--										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.periodo }}</td>-->
+<!--										<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ categoriaCurso.carga_horaria }}</td>-->
+<!--										<td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">-->
+<!--											<a :href="categoriaCurso.inscricoes" class="text-indigo-600 hover:text-indigo-900" target="_blank">Inscrições</a>-->
+<!--										</td>-->
+<!--									</template>-->
                                 </tr>
 							</tbody>
                         </table>
@@ -100,24 +102,25 @@
             return {
                 message: 'Hello Vue!',
                 courses: [],
-                coursesFiltered: [],
                 type: 'expandir',
-				procurar: null
+				curso: ''
             }
         },
         mounted() {
-            fetch('http://localhost:8080/data.json')
-                .then((response) => {
-                    response.json().then(res => {
-                        this.courses = res
-
-                        this.coursesFiltered = this.courses.expandir
-                    })
-                })
-                .catch(err => {
-                })
-
+            this.procuraCursos()
         },
+		methods: {
+			procuraCursos() {
+				fetch(`http://127.0.0.1:8000/api/courses?type=${this.type}&curso=${this.curso}`)
+					.then((response) => {
+						response.json().then(res => {
+							this.courses = res
+						})
+					})
+					.catch(err => {
+					})
+			}
+		},
         computed: {
 			isExpandir() {
 				return this.type === 'expandir'
@@ -128,16 +131,10 @@
         },
 		watch: {
 			type() {
-				if (this.isExpandir) {
-					this.coursesFiltered = this.courses.expandir
-				}
-
-				if (this.isExtensao) {
-					this.coursesFiltered = this.courses.extensao
-				}
+				this.procuraCursos()
 			},
-			'procurar': _.debounce(function (curso) {
-				console.log('oi')
+			'curso': _.debounce(function () {
+				this.procuraCursos()
 			}, 500),
 		}
     }).mount('#app')

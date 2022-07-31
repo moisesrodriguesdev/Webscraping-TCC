@@ -71,7 +71,7 @@ class Extensao extends DriverConnection
 
     private function findCountMonths(): int
     {
-        return count($this->driverEntensao->findElements(WebDriverBy::cssSelector('.fam-calendario-owl .owl-item:not(.cloned) > li'))) - 2;
+        return count($this->driverEntensao->findElements(WebDriverBy::cssSelector('.fam-calendario-owl .owl-item:not(.cloned) > li'))) - 5;
     }
 
     private function getMonthPageCurrent(): string
